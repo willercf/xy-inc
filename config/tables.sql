@@ -19,6 +19,7 @@ CREATE TABLE `tb_fields` (
 CREATE TABLE `tb_register_domain` (
   `id_register_domain` int(11) NOT NULL AUTO_INCREMENT,
   `id_domain` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id_register_domain`),
   KEY `fk_id_domain_register_idx` (`id_domain`),
   CONSTRAINT `fk_id_domain_register` FOREIGN KEY (`id_domain`) REFERENCES `tb_domain` (`id_domain`) ON DELETE NO ACTION ON UPDATE NO ACTION

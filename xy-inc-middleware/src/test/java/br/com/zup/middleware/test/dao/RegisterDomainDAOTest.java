@@ -112,8 +112,8 @@ public class RegisterDomainDAOTest extends AbstractTest {
 	private RegisterDomain buildRegisterDomain(Domain domain) {
 
 		RegisterDomain registerDomain = new RegisterDomain();
-
 		registerDomain.setDomain(domain);
+		registerDomain.setName("Domínio 1");
 
 		Set<RegisterField> registerFields = new HashSet<RegisterField>();
 		RegisterField registerField = null;

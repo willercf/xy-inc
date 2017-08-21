@@ -33,6 +33,9 @@ public class RegisterDomain implements Serializable {
 	@JoinColumn(name = "id_domain", referencedColumnName = "id_domain")
 	private Domain domain;
 
+	@Column(name = "name")
+	private String name;
+
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "registerDomain")
 	private Set<RegisterField> registerFields;
 
@@ -54,6 +57,14 @@ public class RegisterDomain implements Serializable {
 
 	public void setDomain(Domain domain) {
 		this.domain = domain;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Set<RegisterField> getRegisterFields() {
